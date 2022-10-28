@@ -31,7 +31,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation project(':core')
     implementation project(':dxf')
     implementation project(':svg')
