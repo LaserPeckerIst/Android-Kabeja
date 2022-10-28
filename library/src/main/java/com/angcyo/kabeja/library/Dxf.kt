@@ -7,10 +7,7 @@ import org.kabeja.svg.SVGGenerator
 import org.kabeja.xml.SAXGenerator
 import org.kabeja.xml.SAXPrettyOutputter
 import org.xml.sax.ContentHandler
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.io.OutputStream
+import java.io.*
 
 
 /**
@@ -47,5 +44,12 @@ object Dxf {
 
     fun parse(inputPath: String, outputPath: String, map: Map<Any?, Any?>? = null) {
         parse(FileInputStream(inputPath), FileOutputStream(outputPath), map)
+    }
+
+    /**转成svg字符串数据*/
+    fun toSvg(inputPath: String, map: Map<Any?, Any?>? = null): String {
+        val outputStream = ByteArrayOutputStream()
+        parse(FileInputStream(inputPath), outputStream, map)
+        return outputStream.toString("UTF-8")
     }
 }
