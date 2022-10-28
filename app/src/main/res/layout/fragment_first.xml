@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <com.angcyo.widget.layout.DslFlowLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/lib_xhdpi"
+        app:r_flow_item_horizontal_space="@dimen/lib_hdpi"
+        app:r_flow_item_vertical_space="@dimen/lib_hdpi">
+
+        <com.angcyo.widget.DslButton
+            android:id="@+id/cydt_button"
+            style="@style/DefaultButtonStyleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:tag="创意地图.dxf"
+            android:text="创意地图" />
+
+        <com.angcyo.widget.DslButton
+            android:id="@+id/fhjfcd_button"
+            style="@style/DefaultButtonStyleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:tag="复活节分层蛋.dxf"
+            android:text="复活节分层蛋" />
+
+        <com.angcyo.widget.DslButton
+            android:id="@+id/dt_button"
+            style="@style/DefaultButtonStyleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:tag="灯塔.dxf"
+            android:text="灯塔" />
+
+        <com.angcyo.widget.DslButton
+            android:id="@+id/jmdq_button"
+            style="@style/DefaultButtonStyleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClick"
+            android:tag="金门大桥.dxf"
+            android:text="金门大桥" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/path_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Path" />
+    </com.angcyo.widget.layout.DslFlowLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/lib_xhdpi"
+        app:layout_constraintTop_toBottomOf="@id/layout" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:text="@string/next"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/text_view"
+        app:srcCompat="@mipmap/ic_launcher" />
+</androidx.constraintlayout.widget.ConstraintLayout>
